@@ -1,4 +1,7 @@
 """
+Date: 30/10/2025
+@author: Javier Ruiz Molero
+
 Ejercicio 2
 Crea una biblioteca de funciones numéricas que contenga las siguientes funciones. Recuerda que puedes usar unas dentro de otras si es necesario.
 
@@ -24,7 +27,6 @@ Haz el programa de manera que al ejecutarse pruebe cada una de las funciones.
 """
 from operator import invert
 
-from ejercicios.EstructurasRepetitivas.ejercicio6 import es_primo
 
 # Función: is_palindromic
 def is_palindromic(numero):
@@ -32,88 +34,88 @@ def is_palindromic(numero):
 
 
 # Función: is_prime
-def is_prime(numero):
-    if numero < 2:
+def is_prime(number):
+    if number < 2:
         return False
-    for i in range(2, int(numero ** 0.5) + 1):
-        if numero % i == 0:
+    for i in range(2, int(number ** 0.5) + 1):
+        if number % i == 0:
             return False
     return True
 
 
 # Función: next_prime
-def next_prime(numero):
-    numero += 1
-    while not is_prime(numero):
-        numero += 1
-    return numero
+def next_prime(number):
+    number += 1
+    while not is_prime(number):
+        number += 1
+    return number
 
 
 # Función: digits
-def digits(numero):
-    numero = abs(numero)
-    if numero == 0:
+def digits(number):
+    number = abs(number)
+    if number == 0:
         return 1
-    contador = 0
-    while numero > 0:
-        numero //= 10
-        contador += 1
-    return contador
+    count = 0
+    while number > 0:
+        number //= 10
+        count += 1
+    return count
 
 
 # Función: reverse
-def reverse(numero):
-    invertido = 0
-    negativo = numero < 0
-    numero = abs(numero)
-    while numero > 0:
-        invertido = invertido * 10 + numero % 10
-        numero //= 10
-    return -invertido if negativo else invertido
+def reverse(number):
+    inverts = 0
+    negative = number < 0
+    number = abs(number)
+    while number > 0:
+        inverts = inverts * 10 + number % 10
+        number //= 10
+    return -inverts if negative else inverts
 
 
 # Función: digit_n
-def digit_n(numero, n):
-    longitud = digits(numero)
-    return (numero // 10 ** (longitud - n - 1)) % 10
+def digit_n(number, n):
+    long = digits(number)
+    return (number // 10 ** (long - n - 1)) % 10
 
 
 # Función: digit_position
-def digit_position(numero, digito):
-    longitud = digits(numero)
-    for i in range(longitud):
-        if digit_n(numero, i) == digito:
+def digit_position(number, digit):
+    long = digits(number)
+    for i in range(long):
+        if digit_n(number, i) == digit:
             return i
     return -1
 
 
 # Función: remove_behind
-def remove_behind(numero, n):
-    return numero // (10 ** n)
+def remove_behind(number, n):
+    return number // (10 ** n)
 
 
 # Función: remove_ahead
-def remove_ahead(numero, n):
-    return numero % (10 ** (digits(numero) - n))
+def remove_ahead(number, n):
+    return number % (10 ** (digits(number) - n))
 
 
 # Función: paste_behind
-def paste_behind(numero, digito):
-    return numero * 10 + digito
+def paste_behind(number, digit):
+    return number * 10 + digit
 
 
 # Función: paste_ahead
-def paste_ahead(numero, digito):
-    return digito * (10 ** digits(numero)) + numero
+def paste_ahead(number, digit):
+    return digit * (10 ** digits(number)) + number
 
 
 # Función: piece_of_number
-def piece_of_number(numero, inicio, fin):
+def piece_of_number(number, init, fin):
     # Extrae los dígitos entre inicio y fin (inclusive)
-    longitud = digits(numero)
-    numero = remove_behind(numero, longitud - fin - 1)
-    numero = remove_ahead(numero, inicio)
-    return numero
+    long = digits(number)
+    number = remove_behind(number, long - fin - 1)
+    number = remove_ahead(number, init)
+    return number
 
 
 # Función: concatenate

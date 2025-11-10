@@ -1,20 +1,26 @@
-#Escribir un programa para calcular la nota final de un examen, considerando que:
+"""
+Date: 20/10/2025
+@author: Javier Ruiz Molero
 
-# cada respuesta correcta suma 5 puntos
-# cada respuesta incorrecta suma -1 puntos
-# cada respuesta en blanco suma 0 puntos.
-#Imprime la puntuación total obtenida por el estudiante y su nota normalizada entre 0 y 10.
-#¿Qué tendrías que hacer para facilitar que los puntos que suman los diferentes
-# tipos de respuestas puedan cambiar en el futuro?
-# Puntos configurables (fácil de modificar en el futuro)
+Ejercicio 6
+Escribir un programa para calcular la nota final de un examen, considerando que:
 
-PUNTOS_CORRECTA = 5
-PUNTOS_INCORRECTA = -1
-PUNTOS_BLANCO = 0
+cada respuesta correcta suma 5 puntos
+cada respuesta incorrecta suma -1 puntos
+cada respuesta en blanco suma 0 puntos.
+Imprime la puntuación total obtenida por el estudiante y su nota normalizada entre 0 y 10.
+¿Qué tendrías que hacer para facilitar que los puntos que suman los diferentes
+tipos de respuestas puedan cambiar en el futuro?
+Puntos configurables (fácil de modificar en el futuro)
+"""
 
-resultado = 0
+POINTS_CORRECT = 5
+POINTS_INCORRECT = -1
+POINTS_BLANC = 0
 
-preguntas = {
+result = 0
+
+quenstions = {
     "¿Cómo se llama la provincia?": "Córdoba",
     "¿En qué comunidad autónoma se encuentra Córdoba?": "Andalucía",
     "¿Qué famoso monumento combina elementos islámicos y cristianos?": "La Mezquita-Catedral",
@@ -28,27 +34,27 @@ preguntas = {
 }
 
 # Recorrer preguntas
-for pregunta, respuesta_correcta in preguntas.items():
-    respuesta = input(pregunta + " ")
+for quenstion, answer_correct in quenstions.items():
+    answer = input(quenstion + " ")
 
-    if respuesta.strip() == "":
+    if answer.strip() == "":
         print("Respuesta en blanco.")
-        resultado += PUNTOS_BLANCO
+        result += POINTS_BLANC
 
-    elif respuesta.strip().lower() == respuesta_correcta.lower():
-        print("✅ Pregunta correcta.")
-        resultado += PUNTOS_CORRECTA
+    elif answer.strip().lower() == answer_correct.lower():
+        print("Pregunta correcta.")
+        result += POINTS_CORRECT
 
     else:
-        print(f"❌ Pregunta incorrecta. La respuesta correcta era: {respuesta_correcta}.")
-        resultado += PUNTOS_INCORRECTA
+        print(f"Pregunta incorrecta. La respuesta correcta era: {answer_correct}.")
+        result += POINTS_INCORRECT
 
-    print(f"Puntuación actual: {resultado}\n")
+    print(f"Puntuación actual: {result}\n")
 
 # Calcular nota normalizada entre 0 y 10
-maximo_posible = len(preguntas) * PUNTOS_CORRECTA
-nota_normalizada = max(0, (resultado / maximo_posible) * 10)
+max_posible = len(quenstions) * POINTS_CORRECT
+note_normal = max(0, (result / max_posible) * 10)
 
 print("=====================================")
-print(f"Puntuación total: {resultado}")
-print(f"Nota normalizada (0-10): {nota_normalizada:.2f}")
+print(f"Puntuación total: {result}")
+print(f"Nota normalizada (0-10): {note_normal:.2f}")

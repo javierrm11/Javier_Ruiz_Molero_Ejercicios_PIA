@@ -1,4 +1,7 @@
 """
+Date: 30/10/2025
+@author: Javier Ruiz Molero
+
 Ejercicio 3
 Crea una función que reciba un número, lo convierta al sistema de palotes y lo devuelva en una cadena de caracteres.
 
@@ -8,13 +11,14 @@ Utiliza esta función en un programa para comprobar que funciona bien. Desde la 
  solo se debe usar print desde el programa principal.
 """
 
-def convertirpalote(numero):
-    salida = ""
-    numero = str(numero)
-    for n in numero:
-        salida += "|" * int(n) + "-"
+def conversational(number):
+    output = ""
+    number = str(number)
+    # recorrer los numeros
+    for n in number:
+        output += "|" * int(n) + "-"
 
-    return salida[0:-1]
+    return output[0:-1]
 
-print(convertirpalote(470213))
-print(convertirpalote(1))
+print(conversational(470213))
+print(conversational(1))

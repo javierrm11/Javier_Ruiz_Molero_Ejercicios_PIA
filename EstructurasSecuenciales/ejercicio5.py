@@ -1,29 +1,36 @@
-# 12. Un ciclista parte de una ciudad A a las HH horas, MM minutos y SS segundos.
-# El tiempo de viaje hasta llegar a otra ciudad B es de T segundos.
-# Escribir un programa que determine la hora de llegada a la ciudad B.
+
+"""
+Date: 20/10/2025
+@author: Javier Ruiz Molero
+
+Ejercicio 5
+Un ciclista parte de una ciudad A a las HH horas, MM minutos y SS segundos.
+El tiempo de viaje hasta llegar a otra ciudad B es de T segundos.
+Escribir un programa que determine la hora de llegada a la ciudad B.
+"""
 
 print("Calcular la hora de llegada del ciclista")
 
 # hora de salida
-hora_salida = input("A que hora sale de la ciudad a con la bici (HH:MM:SS): ")
+hours_exit = input("A que hora sale de la ciudad a con la bici (HH:MM:SS): ")
 # convertirlo en array
-horas_split = hora_salida.split(":")
+hours_split = hours_exit.split(":")
 #guardar horas, minutos y segundos
-horas = int(horas_split[0])
-minutos = int(horas_split[1])
-segundos = int(horas_split[2])
+hours = int(hours_split[0])
+minutes = int(hours_split[1])
+seconds = int(hours_split[2])
 
-#duracion deñ viaje
-tiempoViaje = int(input("Cuanto tarda de ir de ciudad a a ciudad b en segundos: "))
+#duracion del viaje
+time_travel = int(input("Cuanto tarda de ir de ciudad a a ciudad b en segundos: "))
 
-horasDuracion = tiempoViaje // 3600
-minutosDuracion = (tiempoViaje % 3600) // 60
-segundosDuracion = tiempoViaje % 60
+hours_duration = time_travel // 3600
+minutes_duration = (time_travel % 3600) // 60
+seconds_duration = time_travel % 60
 
-horasLlegada = horas + horasDuracion
-minutosLlegada = minutos + minutosDuracion
-segundosLlegada = segundos + segundosDuracion
+hours_arrival = hours + hours_duration
+minutes_arrival = minutes + minutes_duration
+seconds_arrival = seconds + seconds_duration
 
-llegada = f"{horasLlegada}:{minutosLlegada}:{segundosLlegada}"
+arrival = f"{hours_arrival}:{minutes_arrival}:{seconds_arrival}"
 
-print(f"Llegada: {llegada}")
+print(f"Llegada: {arrival}")

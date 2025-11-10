@@ -1,32 +1,40 @@
 """
+Date: 22/10/2025
+@author: Javier Ruiz Molero
+
 Ejercicio 7
 Realiza un programa que pida cinco números enteros y diga cuál es el mayor No se puede usar la función max()..
 """
 #pedir datos
-numero1 = int(input("(1) Introduce un numero: "))
-numero2 = int(input("(2) Introduce un numero: "))
-numero3 = int(input("(3) Introduce un numero: "))
-numero4 = int(input("(4) Introduce un numero: "))
-numero5 = int(input("(5) Introduce un numero: "))
+num_1 = int(input("(1) Introduce un numero: "))
+num_2 = int(input("(2) Introduce un numero: "))
+num_3 = int(input("(3) Introduce un numero: "))
+num_4 = int(input("(4) Introduce un numero: "))
+num_5 = int(input("(5) Introduce un numero: "))
 
 
 
 print()
 
 #calcular si son todos iguales
-if numero1 == numero2 == numero3 == numero4 == numero5:
+if num_1 == num_2 == num_3 == num_4 == num_5:
     print("Son todos iguales")
     exit()
 
+num_mayor = num_1
+
 #Calcular el numero mas alto
-if numero1 > numero2 and numero1 > numero3 and numero1 > numero4 and numero1 > numero5:
-    print(f"El numero 1 ({numero1}) es el mayor")
-elif numero2 > numero3 and numero2 > numero4 and numero2 > numero5:
-    print(f"El numero 2 ({numero2}) es el mayor")
-elif numero3 > numero4 and numero3 > numero5:
-    print(f"El numero 3 ({numero3}) es el mayor")
-elif numero4 > numero5:
-    print(f"El numero 4 ({numero4}) es el mayor")
-else:
-    print(f"El numero 5 ({numero5}) es el mayor")
+if num_2 > num_mayor:
+    num_mayor = num_2
+
+if num_3 > num_mayor:
+    num_mayor = num_3
+
+if num_4 > num_mayor:
+    num_mayor = num_4
+
+if num_5 > num_mayor:
+    num_mayor = num_5
+
+print(f"El numero mayor es: {num_mayor}")
 

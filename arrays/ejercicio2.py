@@ -1,4 +1,7 @@
 """
+Date: 28/10/2025
+@author: Javier Ruiz Molero
+
 Ejercicio 2
 Haz el ejercicio anterior usando numpy y aprovechando sus ventajas.
 """

@@ -1,4 +1,7 @@
 """
+Date: 24/10/2025
+@author: Javier Ruiz Molero
+
 Ejercicio 6
 Crea un programa que muestre en pantalla los N primeros números primos.
 El valor de N se pide por teclado al usuario/a.
@@ -6,24 +9,25 @@ El valor de N se pide por teclado al usuario/a.
 
 n = int(input("¿Cuántos números primos quieres ver?: "))
 
-contador = 0
-numero = 2
-primos = []
+counts = 0
+number = 2
+primes = []
 
-while contador < n:
+# recorrer blucle hasta que count sea menor que el numero de primos que quiere el usuario
+while counts < n:
     #Comprobamos si el numero es primo
-    es_primo = True
-    for i in range(2, int(numero ** 0.5) + 1):
-        if numero % i == 0:
-            es_primo = False
+    is_prime = True
+    for i in range(2, int(number ** 0.5) + 1):
+        if number % i == 0:
+            is_prime = False
             break
 
-    if es_primo:
-        primos.append(numero)
-        contador += 1
+    if is_prime:
+        primes.append(number)
+        counts += 1
 
-    numero += 1
+    number += 1
 
 #Mostramos los resultados
-for p in primos:
+for p in primes:
     print(f"{p} es primo.")

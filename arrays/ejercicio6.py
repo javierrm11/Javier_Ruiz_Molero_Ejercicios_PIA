@@ -1,4 +1,7 @@
 """
+Date: 28/10/2025
+@author: Javier Ruiz Molero
+
 Ejercicio 6
 Escribe un programa que genere 20 números enteros entre 100 y 999.
 Estos números se deben introducir en una lista de 4 filas por 5 columnas.
@@ -8,22 +11,22 @@ La suma total debe aparecer en la esquina inferior derecha.
 
 import numpy as np
 
-numeros = np.random.randint(100,999,20).reshape((4,5))
+numbers = np.random.randint(100,999,20).reshape((4,5))
 
 # Calculamos sumas de filas y columnas
-suma_filas = numeros.sum(axis=1)
-suma_columnas = numeros.sum(axis=0)
-suma_total = numeros.sum()
+sum_fills = numbers.sum(axis=1)
+sum_columns = numbers.sum(axis=0)
+sum_total = numbers.sum()
 
 # Mostramos la tabla estilo hoja de cálculo
 print("Tabla con sumas parciales:")
-for i in range(numeros.shape[0]):
-    fila = " ".join(f"{num:4d}" for num in numeros[i])
-    print(f"{fila} | {suma_filas[i]}")
+for i in range(numbers.shape[0]):
+    fill = " ".join(f"{num:4d}" for num in numbers[i])
+    print(f"{fill} | {sum_fills[i]}")
 
 # Mostramos la suma de columnas
-linea_columnas = " ".join(f"{num:4d}" for num in suma_columnas)
+line_columns = " ".join(f"{num:4d}" for num in sum_columns)
 print("-" * 29)
-print(f"{linea_columnas} | {suma_total}")
+print(f"{line_columns} | {sum_total}")
 
 

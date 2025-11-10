@@ -1,4 +1,7 @@
 """
+Date: 24/10/2025
+@author: Javier Ruiz Molero
+
 Ejercicio 3
 Crea una aplicación que permita adivinar un número. La aplicación genera un número aleatorio del 1 al 100.
  A continuación va pidiendo números y va respondiendo si el número a adivinar es mayor o menor que el introducido,
@@ -10,23 +13,22 @@ Para usar números aleatorios en Python: http://www.mclibre.org/consultar/python
 import random
 
 #variables
-numeroAdivinar = random.randint(1, 100)
-intentos = 10
+number_guess = random.randint(1, 100)
+tries = 10
 
 # bucle para los intentos
-while intentos > 0:
-    numero = int(input("Adivine el numero del 1 al 100: "))
+while tries > 0:
+    number = int(input("Adivine el numero del 1 al 100: "))
     # comprobar si es mayor, menor o acertado
-    if numero > numeroAdivinar:
+    if number > number_guess:
         print("El numero a adivinar es menor")
-    elif numero < numeroAdivinar:
+    elif number < number_guess:
         print("El numero a adivinar es mayor")
     else:
-        print(f"Has adivinado el numero en {10 -intentos} intentos")
+        print(f"Has adivinado el numero en {10 -tries} intentos")
         exit()
-    if intentos == 1:
+    if tries == 0:
         print("Te has quedado sin intentos")
         break
-
-    print(f"Te quedan {intentos} intentos")
-    intentos -= 1
+    tries -= 1
+    print(f"Te quedan {tries} intentos")
