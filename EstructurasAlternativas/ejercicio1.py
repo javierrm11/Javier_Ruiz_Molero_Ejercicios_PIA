@@ -16,7 +16,7 @@ if person_1 == person_2:
     print("La persona 1 y la persona 2 tienen la misma edad.")
     exit()
 
-#Comprobamos quien es mayor
+# Comprobamos quien es mayor
 if person_1 > person_2:
     print("La persona 1 es mayor que la persona 2.")
 else:

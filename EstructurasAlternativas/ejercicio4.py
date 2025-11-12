@@ -7,10 +7,10 @@ Escribir un programa que que calcule el desglose mínimo en billetes y monedas d
 Hay billetes de 500, 200, 100, 50, 20, 10 y 5€ y monedas de 2 y 1€.
 """
 
-#pedir monedas
+# Pedir monedas
 money = int(input("Cuanto dinero tienes: "))
 
-#variables de dinero
+# Variables de dinero
 ticket_500 = 0
 ticket_200 = 0
 ticket_100 = 0
@@ -23,7 +23,7 @@ ticket_1 = 0
 
 print()
 
-# calcular monedas
+# Calcular monedas
 if money > 500:
     ticket_500 = int(money / 500)
     money = money - ticket_500 * 500

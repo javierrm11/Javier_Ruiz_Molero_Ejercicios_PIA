@@ -9,7 +9,7 @@ En caso de que no se introduzca un número o que este sea menor que 2 se debe mo
 
 try:
     number = int(input("Introduce un número para saber si es primo: "))
-    # comprobar si es menor de 2
+    # Comprobar si es menor de 2
     if number < 2:
         print("Error: el número debe ser mayor o igual a 2.")
         exit()

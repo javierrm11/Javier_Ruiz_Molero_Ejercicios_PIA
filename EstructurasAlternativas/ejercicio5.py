@@ -10,12 +10,12 @@ day_week = int(input("Introduce el dia semana: (1 al 7): "))
 
 print()
 
-# si el dia no es valido
+# Si el dia no es valido
 if day_week < 1 or day_week > 7:
     print("El numero introducido es invalido")
     exit()
 
-# calcular el dia de la semana
+# Calcular el dia de la semana
 if day_week == 1:
     print("Es lunes")
 elif day_week == 2:

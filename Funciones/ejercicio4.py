@@ -27,7 +27,7 @@ def converter_morse(number):
     }
 
     number = str(number)
-    morse = [morse_numbers[d] for d in number]  # convierte cada dígito a su Morse
+    morse = [morse_numbers[d] for d in number]  # Convierte cada dígito a su Morse
     return " ".join(morse)
 
 

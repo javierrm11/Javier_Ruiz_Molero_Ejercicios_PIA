@@ -12,14 +12,14 @@ Para usar números aleatorios en Python: http://www.mclibre.org/consultar/python
 """
 import random
 
-#variables
+# Variables
 number_guess = random.randint(1, 100)
 tries = 10
 
-# bucle para los intentos
+# Bucle para los intentos
 while tries > 0:
     number = int(input("Adivine el numero del 1 al 100: "))
-    # comprobar si es mayor, menor o acertado
+    # Comprobar si es mayor, menor o acertado
     if number > number_guess:
         print("El numero a adivinar es menor")
     elif number < number_guess:

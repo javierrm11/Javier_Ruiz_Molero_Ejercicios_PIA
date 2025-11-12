@@ -13,13 +13,13 @@ older = 0
 younger = 0
 equal = 0
 
-# pedir numeros
+# Pedir numeros
 while number_imprint > 0:
     number = int(input("Ingrese un numero: "))
     numbers.append(number)
     number_imprint = number_imprint - 1
 
-# recorrer numeros
+# Recorrer numeros
 for number in numbers:
     if number > 0:
         older += 1

@@ -14,7 +14,7 @@ Utiliza esta función en un programa para comprobar que funciona bien. Desde la 
 def conversational(number):
     output = ""
     number = str(number)
-    # recorrer los numeros
+    # Recorrer los numeros
     for n in number:
         output += "|" * int(n) + "-"
 

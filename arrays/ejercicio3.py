@@ -8,14 +8,14 @@ El programa debe ser capaz de pasar todos los números pares a las primeras posi
 Utiliza arrays auxiliares si es necesario.
 """
 import numpy as np
-# creaccion de un array con numero aleatorios entre 0 y 100
+# Creaccion de un array con numero aleatorios entre 0 y 100
 numbers = np.random.randint(0,100,20)
 
-#guardamos los pares y impares en variables
+# Guardamos los pares y impares en variables
 numbers_even = numbers[numbers % 2 == 0]
 numbers_odd = numbers[numbers % 2 != 0]
 
-# lo ordenamos poniendo primero los pares
+# Lo ordenamos poniendo primero los pares
 ordinate = np.concatenate((numbers_even, numbers_odd))
 
 print(ordinate)

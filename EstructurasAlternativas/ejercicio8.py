@@ -16,12 +16,12 @@ La calificación cualitativa será una de las siguientes:
 
 qualification = float(input("Calificacion: "))
 
-#Comprobar que sea un numero correcto
+# Comprobar que sea un numero correcto
 if qualification > 10 or qualification < 0:
     print("Calificacion no valida")
     exit()
 
-#Calcular nota
+# Calcular nota
 if qualification == 10:
     print("Matrícula de Honor")
 elif qualification >= 9:

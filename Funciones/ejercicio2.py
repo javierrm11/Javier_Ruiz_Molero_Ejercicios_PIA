@@ -123,7 +123,6 @@ def concatenate(num1, num2):
     return num1 * (10 ** digits(num2)) + num2
 
 
-# -------------------------------
 # PRUEBAS DE LAS FUNCIONES
 # -------------------------------
 

@@ -32,7 +32,7 @@ print("Mes\tCuota\t\tInterés\t\tAmortización\tCapital pendiente")
 
 outstanding_capital = loan_amount
 
-# recorrer los menes para las tasas
+# Recorrer los menes para las tasas
 for mounth in range(1, number_of_installments + 1):
     interest = outstanding_capital * monthly_rate
     amortization = installments - interest

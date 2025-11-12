@@ -13,9 +13,9 @@ counts = 0
 number = 2
 primes = []
 
-# recorrer blucle hasta que count sea menor que el numero de primos que quiere el usuario
+# Recorrer blucle hasta que count sea menor que el numero de primos que quiere el usuario
 while counts < n:
-    #Comprobamos si el numero es primo
+    # Comprobamos si el numero es primo
     is_prime = True
     for i in range(2, int(number ** 0.5) + 1):
         if number % i == 0:
@@ -28,6 +28,6 @@ while counts < n:
 
     number += 1
 
-#Mostramos los resultados
+# Mostramos los resultados
 for p in primes:
     print(f"{p} es primo.")

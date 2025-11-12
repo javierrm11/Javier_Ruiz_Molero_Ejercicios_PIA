@@ -11,12 +11,12 @@ import numpy as np
 
 list = np.array([])
 
-# recogemos los 5 numero por teclado y los añadimos a la lista
+# Recogemos los 5 numero por teclado y los añadimos a la lista
 for i in range(5):
     number = int(input("Introduce un numero: "))
     list = np.append(list, number)
 
-#rotamos la lista con numpy
+# Rotamos la lista con numpy
 list_rotate = np.roll(list, 1) # mueve una posicion a la derecha y si es el ultimo lo pasa al primero
 
 print(list_rotate)

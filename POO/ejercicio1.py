@@ -19,7 +19,7 @@ Debe permitir:
 """
 
 class Duration:
-    # metodo constructor
+    # Metodo constructor
     def __init__(self, hours = 0, minutes = 0, seconds = 0):
         if hours < 0 or minutes < 0 or seconds < 0:
             print("Error! No se puede meter horas negatigas")
@@ -74,26 +74,26 @@ class Duration:
     # Metodo para sumar duraciones o segundos
     def __add__(self, other):
         if isinstance(other, Duration):
-            total_duracion = self.__hours * 3600 + self.__minutes * 60 + self.__seconds
-            total_duracion_other = other.__hours * 3600 + other.__minutes * 60 + other.__seconds
+            total_duration = self.__hours * 3600 + self.__minutes * 60 + self.__seconds
+            total_duration_other = other.__hours * 3600 + other.__minutes * 60 + other.__seconds
 
-            total = total_duracion + total_duracion_other
+            total = total_duration + total_duration_other
         elif isinstance(other, int):
             total = self.__hours * 3600 + self.__minutes * 60 + self.__seconds + other
         else:
             return NotImplemented
-        horasTotal = total // 3600
-        minutesTotal = total % 3600 // 60
-        secondsTotal = total % 60
-        return Duration(horasTotal, minutesTotal, secondsTotal)
+        hours_total = total // 3600
+        minutes_total = total % 3600 // 60
+        seconds_total = total % 60
+        return Duration(hours_total, minutes_total, seconds_total)
 
     # Metodo para restar duraciones o segundos
     def __sub__(self, other):
         if isinstance(other, Duration):
-            total_duracion = self.__hours * 3600 + self.__minutes * 60 + self.__seconds
-            total_duracion_other = other.__hours * 3600 + other.__minutes * 60 + other.__seconds
+            total_duration = self.__hours * 3600 + self.__minutes * 60 + self.__seconds
+            total_duration_other = other.__hours * 3600 + other.__minutes * 60 + other.__seconds
 
-            total = total_duracion - total_duracion_other
+            total = total_duration - total_duration_other
             if total < 0:
                 total = 0
         elif isinstance(other, int):

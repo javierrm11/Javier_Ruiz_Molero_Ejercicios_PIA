@@ -11,16 +11,16 @@ Escribir un programa que determine la hora de llegada a la ciudad B.
 
 print("Calcular la hora de llegada del ciclista")
 
-# hora de salida
+# Hora de salida
 hours_exit = input("A que hora sale de la ciudad a con la bici (HH:MM:SS): ")
-# convertirlo en array
+# Convertirlo en array
 hours_split = hours_exit.split(":")
-#guardar horas, minutos y segundos
+# Guardar horas, minutos y segundos
 hours = int(hours_split[0])
 minutes = int(hours_split[1])
 seconds = int(hours_split[2])
 
-#duracion del viaje
+# Duracion del viaje
 time_travel = int(input("Cuanto tarda de ir de ciudad a a ciudad b en segundos: "))
 
 hours_duration = time_travel // 3600

@@ -7,7 +7,7 @@ Haz el ejercicio anterior usando numpy y aprovechando sus ventajas.
 """
 import numpy as np
 
-# arrays con numpy
+# Arrays con numpy
 number = np.random.randint(1, 100, 100)
 square = np.square(number)
 cube = number ** 3

@@ -13,5 +13,5 @@ convert_num_string = str(num)
 # Invertir el número usando slicing
 num_reverse = convert_num_string[::-1]
 
-#mostramos el numero invertido
+# Mostramos el numero invertido
 print(f"El numero invertido: {num_reverse}")

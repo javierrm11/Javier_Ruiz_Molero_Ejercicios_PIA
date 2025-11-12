@@ -13,32 +13,32 @@ Cuantos números están fuera del intervalo.
 Informa si hemos introducido algún número igual a los límites del intervalo.
 """
 
-#variables
+# Variables
 lower_limit = int(input("Indique el limite inferior: "))
 upper_limit = int(input("Indique el limite superior: "))
 numbers = []
 
-#comprobar si el inferior es mayor que el superior
+# Comprobar si el inferior es mayor que el superior
 while lower_limit > upper_limit:
     lower_limit = int(input("Indique el limite inferior: "))
     upper_limit = int(input("Indique el limite superior: "))
 
-# pedir numeros hasta que ponga 0
+# Pedir numeros hasta que ponga 0
 while True:
     number = int(input("Introduce un numero: "))
     if number == 0:
         break
     numbers.append(number)
 
-# suma dentro del intervalo
+# Suma dentro del intervalo
 numbers_inside = [n for n in numbers if lower_limit <= n <= upper_limit]
 print(f"La suma de los números dentro del intervalo es {sum(numbers_inside)}")
 
-# total numeros fuera intervalo
+# Total numeros fuera intervalo
 outside = [n for n in numbers if n < lower_limit or n > upper_limit]
 print(f"Hay {len(outside)} números fuera del intervalo")
 
-# informar si ha introducido numeros igual al intervalo
+# Informar si ha introducido numeros igual al intervalo
 equeals = [n for n in numbers if n == lower_limit or n == upper_limit]
 print(f"Hay {len(equeals)} números iguales al intervalo")
 

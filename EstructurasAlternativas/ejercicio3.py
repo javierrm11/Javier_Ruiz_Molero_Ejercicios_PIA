@@ -10,7 +10,7 @@ pero no si es divisible por 100, excepto que también sea divisible por 400).
 year = int(input("Ingresa el anio para saber si es bisiesto: "))
 print()
 
-#Comprobar si es bisiesto
+# Comprobar si es bisiesto
 if year % 4 == 0 and year % 100 != 0:
     print("Bisiesto")
 else:

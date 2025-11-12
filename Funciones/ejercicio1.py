@@ -13,13 +13,13 @@ muestra un mensaje de error. El menú se volverá a mostrar, a menos que no se d
   Modifica el último programa para que use esta función.
 """
 
-# pedir datos
+# Pedir datos
 # num1 = int(input("Introduce un numero: "))
 # num2 = int(input("Introduce un numero: "))
 num_1 = 0
 num_2 = 0
 
-# menu
+# Menu
 while True:
     """
     opcion = int(input(
@@ -35,7 +35,7 @@ while True:
     """
     options_menu = ["Anadir numeros", "Sumar", "Restar", "Multiplicar", "Dividir", "Terminar"]
 
-    # funciones
+    # Funciones
     def add_menu(menu):
         for i, option in enumerate(menu, start=1):
             print(f"{i}. {option}")
@@ -63,7 +63,7 @@ while True:
 
     option = add_menu(options_menu)
 
-    # comprobar opciones
+    # Comprobar opciones
     match option:
         case 1:
             numbers = add_numbers()
