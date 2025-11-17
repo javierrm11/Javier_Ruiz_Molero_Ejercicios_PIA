@@ -29,6 +29,7 @@ class Fraction:
     @property
     def numerator(self):
         return self.__numerator
+
     @property
     def denominator(self):
         return self.__denominator
@@ -60,29 +61,29 @@ class Fraction:
     def __add__(self, other):
         if isinstance(other, int):
             return Fraction(self.__numerator + other, self.__denominator)
-        elif not isinstance(other, Fraction):
-            return NotImplemented
+        elif  isinstance(other, Fraction):
+            return Fraction(self.__numerator + other.__numerator, self.__denominator + other.__denominator)
         return Fraction(self.__numerator + other.__numerator, self.__denominator + other.__denominator)
 
     def __sub__(self, other):
         if isinstance(other, int):
             return Fraction(self.__numerator - other, self.__denominator)
-        elif not isinstance(other, Fraction):
-            return NotImplemented
+        elif isinstance(other, Fraction):
+            return Fraction(self.__numerator - other.__numerator, self.__denominator - other.__denominator)
         return Fraction(self.__numerator, self.__denominator)
 
     def __mul__(self, other):
         if isinstance(other, int):
             return Fraction(self.__numerator * other, self.__denominator)
-        elif not isinstance(other, Fraction):
-            return NotImplemented
+        elif isinstance(other, Fraction):
+            return Fraction(self.__numerator * other.__numerator, self.__denominator * self.__denominator)
         return Fraction(self.numerator * other.numerator, self.denominator * other.denominator)
 
     def __truediv__(self, other):
         if isinstance(other, int):
             return Fraction(self.__numerator * other, self.__denominator)
-        elif not isinstance(other, Fraction):
-            return NotImplemented
+        elif isinstance(other, Fraction):
+            return Fraction(self.__numerator * other.__numerator, self.__denominator *other.__denominator)
         num = self.numerator * other.denominator
         den = self.denominator * other.numerator
         return Fraction(num, den)
@@ -98,7 +99,7 @@ class Fraction:
         if isinstance(other, int):
             return self.__numerator < other and self.__denominator < other
         elif isinstance(other, Fraction):
-            return NotImplemented
+            return self.numerator < other.numerator and self.denominator < other.denominator
         return self.numerator * other.denominator < other.numerator * self.denominator
     def __le__(self, other):
         return self == other or self < other
