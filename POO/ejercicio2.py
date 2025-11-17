@@ -54,6 +54,9 @@ class Fraction:
     def __str__(self):
         return f"{self.__numerator}/{self.__denominator}"
 
+    def __repr__(self):
+        return f"{self.__numerator}/{self.__denominator}"
+
     def __add__(self, other):
         if isinstance(other, int):
             return Fraction(self.__numerator + other, self.__denominator)
