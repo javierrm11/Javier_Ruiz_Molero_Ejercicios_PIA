@@ -87,6 +87,7 @@ class Fraction:
         num = self.numerator * other.denominator
         den = self.denominator * other.numerator
         return Fraction(num, den)
+
     def __eq__(self, other):
         if isinstance(other, int):
             return self.__numerator == other and self.__denominator == other
@@ -101,12 +102,16 @@ class Fraction:
         elif isinstance(other, Fraction):
             return self.numerator < other.numerator and self.denominator < other.denominator
         return self.numerator * other.denominator < other.numerator * self.denominator
+
     def __le__(self, other):
         return self == other or self < other
+
     def __gt__(self, other):
         return not self <= other
+
     def __ge__(self, other):
         return not self < other
+
     def __ne__(self, other):
         return not self == other
 
