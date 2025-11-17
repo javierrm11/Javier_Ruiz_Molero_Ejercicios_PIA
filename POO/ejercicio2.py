@@ -16,11 +16,11 @@ Crea una clase, y pruébala, que modele fracciones. Debe permitir:
 - Ojo!!! esto se puede hacer 1 < 1/2
 """
 import math
+
 class Fraction:
     def __init__(self, numerator, denominator):
         if denominator == 0:
-            print("No se puede tener un denominador cero.")
-            exit()
+            raise ZeroDivisionError("Denominator no puede ser cero")
         # Simplificar la fracción
         gcd = math.gcd(numerator, denominator)
         self.__numerator = numerator // gcd
@@ -33,6 +33,24 @@ class Fraction:
     def denominator(self):
         return self.__denominator
 
+    @numerator.setter
+    def numerator(self, numerator):
+        # Simplificar la fracción
+        gcd = math.gcd(numerator, self.__denominator)
+        self.__numerator = numerator // gcd
+        self.__denominator = self.__denominator // gcd
+
+    @denominator.setter
+    def denominator(self, denominator):
+        if denominator == 0:
+            print("No se puede tener un denominador cero.")
+            exit()
+        # Simplificar la fracción
+        gcd = math.gcd(self.__numerator, denominator)
+        self.__numerator = self.__numerator // gcd
+        self.__denominator = denominator // gcd
+
+    # Metodo para imprimir Fracciones
     def __str__(self):
         return f"{self.__numerator}/{self.__denominator}"
 
@@ -101,4 +119,6 @@ print(f<f1)
 print(f!=f1)
 print(f==10)
 print(f<10)
+f.numerator = 4
+print(f)
 
